@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Card</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src ='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script type="text/javascript">	
+		$(document).ready(function(){
+			
+			$('#button').click(function(){
+				var fname = $('#first').val();
+          		var lname = $('#last').val();
+          		var desc = $('#desc').val();
+			
+			$('#users').append('<li><h3>'+fname+' '+lname+'</h3><span>Click here for Description</span><p>'+desc+'</p></li>');
+				return false;	 	 
+
+			});
+
+			 $(document).on('click', 'span', function() {
+          		$(this).siblings().slideToggle("slow");
+          		$('li').css('border', '1px solid black');
+
+        	});
+
+			
+			}); 
+
+	
+	</script>
+
+</head>
+	<body>
+		<div id="container">
+			<form id="top">
+				<p>First name:</p><input type="text" name="firstname" id="first"><br>
+      			<p>Last Name:</p><input type="text" name="lastname" id="last">
+      			<p>Description:</p><br>
+      			<textarea id="desc"></textarea><br>
+      			<input type="submit" name="submit" value="Add User" id="button">	
+    		</form>
+    			<ul id="users">
+    			</ul>
+				<!-- <div class="new-user">
+				 <span></span>
+				  <p id="desc-link">Click here for description</p>
+				</div> -->
+
+			
+
+		</div>		
+	</body>	
+</html>	 

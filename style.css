@@ -1,0 +1,26 @@
+*{
+	
+}
+#top{
+	width:200px;
+	display:inline-block;
+	vertical-align: top;
+}
+
+
+ul > li > p{
+	list-style-type: none;
+	display:none;
+}
+
+
+li{
+	list-style-type: none;
+}
+
+#users{
+	width:300px;
+	display:inline-block;
+	margin-top:15px;
+	vertical-align: top;
+}
